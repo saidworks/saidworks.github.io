@@ -45,6 +45,12 @@ jobs:
         with:
           source: ./
           destination: ./_site
+          
+      - name: Fix permissions
+        run: sudo chown -R $USER:$USER ${{ github.workspace }}/_site
+
+      - name: Build search index
+        run: node _scripts/build-search-index.js
 
       - name: Build Lunr search index
         run: node _scripts/build-search-index.js
