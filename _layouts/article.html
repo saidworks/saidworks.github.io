@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<article class="article">
+  <header class="article-header">
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="article-date">{{ page.date | date: '%B %d, %Y' }}</time>
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.categories %}
+    <div class="article-categories">
+      {% for cat in page.categories %}
+      <span class="category-badge">{{ cat }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% include tag-chips.html tags=page.tags %}
+  </header>
+
+  <div class="article-body">
+    {{ content }}
+  </div>
+
+  {% include backlinks.html %}
+
+  <nav class="article-nav">
+    {% assign sorted = site.articles | sort: 'date' %}
+    {% assign idx = nil %}
+    {% for a in sorted %}
+      {% if a.url == page.url %}{% assign idx = forloop.index0 %}{% endif %}
+    {% endfor %}
+    {% if idx %}
+      {% assign prev_idx = idx | minus: 1 %}
+      {% assign next_idx = idx | plus: 1 %}
+      {% if prev_idx >= 0 %}
+        {% assign prev = sorted[prev_idx] %}
+      {% endif %}
+      {% if next_idx < sorted.size %}
+        {% assign next = sorted[next_idx] %}
+      {% endif %}
+    {% endif %}
+    <div class="article-nav-inner">
+      {% if prev %}
+      <a href="{{ prev.url | relative_url }}" class="article-nav-link article-nav-prev">
+        <span class="article-nav-label">&larr; Previous</span>
+        <span class="article-nav-title">{{ prev.title }}</span>
+      </a>
+      {% else %}<span></span>{% endif %}
+      {% if next %}
+      <a href="{{ next.url | relative_url }}" class="article-nav-link article-nav-next">
+        <span class="article-nav-label">Next &rarr;</span>
+        <span class="article-nav-title">{{ next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+</article>

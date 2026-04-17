@@ -1,0 +1,34 @@
+title: "Technical Blog"
+description: "Articles on software development, architecture, and best practices"
+url: ""
+baseurl: ""
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SETUP_GUIDE.md
+  - ARTICLE_REFERENCE.md
+  - CLAUDE.md
+  - _scripts
+  - _templates
+  - "*.sh"

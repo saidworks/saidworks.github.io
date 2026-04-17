@@ -1,0 +1,12 @@
+{% assign page_slug = page.url | split: '/' | last %}
+{% assign links = site.data.backlinks[page_slug] %}
+{% if links and links.size > 0 %}
+<section class="backlinks">
+  <h2>Pages that link here</h2>
+  <ul>
+    {% for link in links %}
+    <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

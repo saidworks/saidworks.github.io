@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started with This Blog",
+      "category": "Best Practices",
+      "url": "/articles/getting-started/",
+      "connections": 0
+    },
+    {
+      "id": "continue",
+      "title": "Continue VS Code Extension with Local LLMs for Java Spring Development",
+      "category": "AI",
+      "url": "/articles/continue/",
+      "connections": 0
+    },
+    {
+      "id": "dotnet-cli-cheatsheet",
+      "title": ".NET CLI, NuGet Package Manager, Linting & Code Formatting Cheatsheet",
+      "category": "AI",
+      "url": "/articles/dotnet-cli-cheatsheet/",
+      "connections": 0
+    },
+    {
+      "id": "github-copilot-oop",
+      "title": "GitHub Copilot in VS Code for Java (Spring) & C# (.NET)",
+      "category": "AI",
+      "url": "/articles/github-copilot-oop/",
+      "connections": 0
+    },
+    {
+      "id": "github-copilot-py-ts",
+      "title": "GitHub Copilot in VS Code for Angular, Flask & FastAPI",
+      "category": "AI",
+      "url": "/articles/github-copilot-py-ts/",
+      "connections": 0
+    },
+    {
+      "id": "jetbrains",
+      "title": "JetBrains AI Assistant & Junie for Spring (IntelliJ IDEA) and .NET (Rider) Development",
+      "category": "AI",
+      "url": "/articles/jetbrains/",
+      "connections": 0
+    },
+    {
+      "id": "open-webui",
+      "title": "Open WebUI Installation & Management",
+      "category": "AI",
+      "url": "/articles/open-webui/",
+      "connections": 0
+    },
+    {
+      "id": "llama-ccp",
+      "title": "Llama.cpp Guide: Model Management and Server Setup",
+      "category": "AI",
+      "url": "/articles/llama-ccp/",
+      "connections": 0
+    },
+    {
+      "id": "gocodegen",
+      "title": "Gocodegen",
+      "category": "DevOps",
+      "url": "/articles/gocodegen/",
+      "connections": 0
+    },
+    {
+      "id": "requirements",
+      "title": "Requirements",
+      "category": "Programming",
+      "url": "/articles/requirements/",
+      "connections": 0
+    },
+    {
+      "id": "uv",
+      "title": "Description",
+      "category": "Programming",
+      "url": "/articles/uv/",
+      "connections": 0
+    },
+    {
+      "id": "postgres-17",
+      "title": "Windows GUI installation",
+      "category": "Databases",
+      "url": "/articles/postgres-17/",
+      "connections": 0
+    },
+    {
+      "id": "docker",
+      "title": "build an image",
+      "category": "DevOps",
+      "url": "/articles/docker/",
+      "connections": 0
+    },
+    {
+      "id": "dockerfile-helloworld-example",
+      "title": "set the base image. Since we're running",
+      "category": "DevOps",
+      "url": "/articles/dockerfile-helloworld-example/",
+      "connections": 0
+    },
+    {
+      "id": "docker-commands",
+      "title": "Docker Commands",
+      "category": "DevOps",
+      "url": "/articles/docker-commands/",
+      "connections": 0
+    },
+    {
+      "id": "iot-toolsmd",
+      "title": "Iot Tools.Md",
+      "category": "DevOps",
+      "url": "/articles/iot-toolsmd/",
+      "connections": 0
+    },
+    {
+      "id": "aws-cli",
+      "title": "Aws Cli",
+      "category": "DevOps",
+      "url": "/articles/aws-cli/",
+      "connections": 0
+    },
+    {
+      "id": "pipeline",
+      "title": "Pipeline",
+      "category": "DevOps",
+      "url": "/articles/pipeline/",
+      "connections": 0
+    },
+    {
+      "id": "angular-structure",
+      "title": "Angular Structure",
+      "category": "Frontend",
+      "url": "/articles/angular-structure/",
+      "connections": 0
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "category": "Frontend",
+      "url": "/articles/references/",
+      "connections": 0
+    },
+    {
+      "id": "csharp",
+      "title": "CSharp Fundamentals",
+      "category": "Backend",
+      "url": "/articles/csharp/",
+      "connections": 0
+    },
+    {
+      "id": "learn",
+      "title": "Learn",
+      "category": "Backend",
+      "url": "/articles/learn/",
+      "connections": 0
+    },
+    {
+      "id": "laravel-blade-template-cheatsheet",
+      "title": "Laravel Blade Template Cheatsheet",
+      "category": "Backend",
+      "url": "/articles/laravel-blade-template-cheatsheet/",
+      "connections": 0
+    },
+    {
+      "id": "hibernate",
+      "title": "Hibernate",
+      "category": "Backend",
+      "url": "/articles/hibernate/",
+      "connections": 0
+    },
+    {
+      "id": "server",
+      "title": "Server",
+      "category": "Backend",
+      "url": "/articles/server/",
+      "connections": 0
+    },
+    {
+      "id": "usefulresources",
+      "title": "Useful resources",
+      "category": "Frontend",
+      "url": "/articles/usefulresources/",
+      "connections": 0
+    },
+    {
+      "id": "css-snippets-ref",
+      "title": "Css Snippets Ref",
+      "category": "Frontend",
+      "url": "/articles/css-snippets-ref/",
+      "connections": 0
+    },
+    {
+      "id": "resources",
+      "title": "Resources",
+      "category": "Frontend",
+      "url": "/articles/resources/",
+      "connections": 0
+    },
+    {
+      "id": "git-notes",
+      "title": "Git Notes",
+      "category": "Tools",
+      "url": "/articles/git-notes/",
+      "connections": 0
+    },
+    {
+      "id": "external-dvd",
+      "title": "Debian/linux only - Linux SCSI generic driver",
+      "category": "IoT",
+      "url": "/articles/external-dvd/",
+      "connections": 0
+    },
+    {
+      "id": "home-assistant",
+      "title": "Home Assistant",
+      "category": "IoT",
+      "url": "/articles/home-assistant/",
+      "connections": 0
+    },
+    {
+      "id": "pi-hole-verizon-router",
+      "title": "Example static IP configuration:",
+      "category": "IoT",
+      "url": "/articles/pi-hole-verizon-router/",
+      "connections": 0
+    },
+    {
+      "id": "maven",
+      "title": "Maven",
+      "category": "Programming",
+      "url": "/articles/maven/",
+      "connections": 0
+    },
+    {
+      "id": "archlinux",
+      "title": "Archlinux",
+      "category": "DevOps",
+      "url": "/articles/archlinux/",
+      "connections": 0
+    },
+    {
+      "id": "basic-commands-wsl",
+      "title": "Basic commands for WSL",
+      "category": "DevOps",
+      "url": "/articles/basic-commands-wsl/",
+      "connections": 0
+    },
+    {
+      "id": "wsl",
+      "title": "Wsl",
+      "category": "Programming",
+      "url": "/articles/wsl/",
+      "connections": 0
+    },
+    {
+      "id": "system-design",
+      "title": "System Design Cheatsheet",
+      "category": "Architecture",
+      "url": "/articles/system-design/",
+      "connections": 0
+    }
+  ],
+  "links": []
+}

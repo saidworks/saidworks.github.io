@@ -1,0 +1,14 @@
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-brand">{{ site.title }}</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/tags' | relative_url }}" {% if page.url == '/tags/' %}aria-current="page"{% endif %}>Tags</a>
+      <a href="{{ '/search' | relative_url }}" {% if page.url == '/search/' %}aria-current="page"{% endif %}>Search</a>
+      <a href="{{ '/graph' | relative_url }}" {% if page.url == '/graph/' %}aria-current="page"{% endif %}>Graph</a>
+    </div>
+  </div>
+</nav>

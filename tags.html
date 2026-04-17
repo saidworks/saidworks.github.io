@@ -1,0 +1,59 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+{% assign all_tags = "" | split: "" %}
+{% for article in site.articles %}
+  {% for tag in article.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | sort_natural %}
+
+<h1 class="page-title" style="font-family: var(--font-heading); font-size: var(--text-3xl); margin-bottom: var(--space-xl);">Tags</h1>
+
+<div class="tags-nav">
+  {% for tag in all_tags %}
+  <a href="#{{ tag | slugify }}" class="tag-chip" data-tag="{{ tag | slugify }}">
+    {{ tag }}
+    {% assign count = 0 %}
+    {% for article in site.articles %}
+      {% if article.tags contains tag %}{% assign count = count | plus: 1 %}{% endif %}
+    {% endfor %}
+    <span style="opacity: 0.6;">({{ count }})</span>
+  </a>
+  {% endfor %}
+</div>
+
+{% for tag in all_tags %}
+<section class="tag-section" id="{{ tag | slugify }}" data-tag="{{ tag | slugify }}">
+  <h2 class="tag-section-title">
+    {{ tag }}
+    {% assign count = 0 %}
+    {% for article in site.articles %}
+      {% if article.tags contains tag %}{% assign count = count | plus: 1 %}{% endif %}
+    {% endfor %}
+    <span class="tag-section-count">({{ count }})</span>
+  </h2>
+  <div class="article-list">
+    {% assign sorted = site.articles | sort: 'date' | reverse %}
+    {% for article in sorted %}
+      {% if article.tags contains tag %}
+      <article class="article-card">
+        <a href="{{ article.url | relative_url }}" class="article-card-link">
+          <time datetime="{{ article.date | date: '%Y-%m-%d' }}" class="article-date">{{ article.date | date: '%B %d, %Y' }}</time>
+          <h3 class="article-card-title">{{ article.title }}</h3>
+        </a>
+        {% include tag-chips.html tags=article.tags %}
+      </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+
+<script src="{{ '/assets/js/tag-filter.js' | relative_url }}"></script>

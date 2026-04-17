@@ -1,0 +1,17 @@
+---
+layout: default
+title: Search
+permalink: /search/
+---
+
+<div class="search-container">
+  <h1 class="page-title" style="font-family: var(--font-heading); font-size: var(--text-3xl); margin-bottom: var(--space-xl);">Search</h1>
+  <div class="search-input-wrap">
+    <input type="search" id="search-input" class="search-input" placeholder="Search articles..." autocomplete="off" autofocus>
+  </div>
+  <div id="search-count" class="search-count"></div>
+  <div id="search-results" class="search-results"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>

@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <h1 class="hero-title">{{ site.title }}</h1>
+  <p class="hero-tagline">{{ site.description }}</p>
+</section>
+
+{% assign sorted_articles = site.articles | sort: 'date' | reverse %}
+
+{% assign all_categories = "" | split: "" %}
+{% for article in site.articles %}
+  {% for cat in article.categories %}
+    {% unless all_categories contains cat %}
+      {% assign all_categories = all_categories | push: cat %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+{% if all_categories.size > 0 %}
+<section class="categories-section">
+  <h2>Categories</h2>
+  <div class="category-grid">
+    {% for cat in all_categories %}
+    {% assign cat_slug = cat | slugify %}
+    <a href="{{ '/tags/#' | append: cat_slug | relative_url }}" class="category-card">
+      <span class="category-name">{{ cat }}</span>
+      {% assign count = 0 %}
+      {% for article in site.articles %}
+        {% if article.categories contains cat %}{% assign count = count | plus: 1 %}{% endif %}
+      {% endfor %}
+      <span class="category-count">{{ count }} article{% if count != 1 %}s{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="articles-section">
+  <h2>Recent Articles</h2>
+  {% if sorted_articles.size == 0 %}
+  <p class="empty-state">No articles yet. Add markdown files to <code>_articles/</code> to get started.</p>
+  {% else %}
+  <div class="article-list">
+    {% for article in sorted_articles %}
+    <article class="article-card">
+      <a href="{{ article.url | relative_url }}" class="article-card-link">
+        <time datetime="{{ article.date | date: '%Y-%m-%d' }}" class="article-date">{{ article.date | date: '%B %d, %Y' }}</time>
+        <h3 class="article-card-title">{{ article.title }}</h3>
+        {% if article.excerpt %}
+        <p class="article-excerpt">{{ article.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+      </a>
+      {% include tag-chips.html tags=article.tags %}
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
