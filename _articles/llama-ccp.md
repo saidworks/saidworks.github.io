@@ -1,6 +1,6 @@
 ---
 title: "Llama.cpp Guide: Model Management and Server Setup"
-date: 2025-10-11
+date: 2026-04-17
 tags:
   - ai
   - inference
