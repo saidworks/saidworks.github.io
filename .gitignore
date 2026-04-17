@@ -17,3 +17,19 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+Gemfile.lock
+
+# Node (search index build)
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
